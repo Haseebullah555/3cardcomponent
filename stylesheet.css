@@ -8,8 +8,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw;
-  
+  width: 95vw;
+  min-height: 95vh;
+  flex-direction: column;
+}
+h1, button{
+  color:hsl(0, 0%, 95%);
+  font-family: 'Lexend Deca', sans-serif;
+
+
+}
+p{
+  color:hsla(0, 0%, 100%, 0.75);
+  font-family: 'Lexend Deca', sans-serif;
+}
+button{
+  text-align: center;
+  width: 150px;
+  height: 30px;
+  border: none;
+  border-radius: 30px;
 }
 #container {
   display: flex;
@@ -22,11 +40,20 @@ body {
 #sedans {
   background-color: var(--bright-orange);
 }
+#sedans button{
+  color: var(--bright-orange);
+}
 #suvs {
   background-color: var(--dark-cyan);
 }
+#suvs button{
+  color: var(--dark-cyan);
+}
 #luxury {
   background-color: var(--very-dark-cyan);
+}
+#luxury button{
+  color: var(--very-dark-cyan);
 }
 .cards {
   height: 300px;
@@ -39,4 +66,39 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+#sedans button:hover{
+  cursor: pointer;  
+  background-color: transparent;
+  border: 2px solid hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%);
+}
+#suvs button:hover{
+  cursor: pointer;  
+  border: 2px solid hsl(0, 0%, 95%);
+  background-color: transparent;
+  color: hsl(0, 0%, 95%);
+}
+#luxury button:hover{
+  cursor: pointer;  
+  background-color: transparent;
+  border: 2px solid hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%);
+}
+@media (max-width:375px) {
+  body {
+  display: flex;
+  width: 95vw;
+  min-height: 95vh;
+  flex-direction: column;
+}
+  #container {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
 }
